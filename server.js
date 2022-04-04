@@ -15,7 +15,7 @@ server.on('connection', (socket) => {
   });
   networker.init();
   clients.push({ socket, networker });
-  networker.send('Hi,client!');
+  networker.send('Hi,client!,this is Server0');
 
   socket.on('end', () => {
     console.log('socket end');
@@ -28,4 +28,4 @@ server.on('connection', (socket) => {
   });
 });
 
-server.listen(8000);
+server.listen(8080);
